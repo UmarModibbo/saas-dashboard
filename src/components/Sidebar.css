@@ -1,0 +1,156 @@
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  background: none;
+  color: #1f2937;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .sidebar-toggle {
+  color: #f3f4f6;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1f2937;
+  border-right-color: #374151;
+}
+
+.sidebar-header {
+  padding: 0 1.5rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+body.dark-mode .sidebar-header {
+  border-bottom-color: #374151;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+body.dark-mode .logo {
+  color: #f3f4f6;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 1.5rem 0;
+}
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  color: #6b7280;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu-link:hover {
+  color: #1f2937;
+  background-color: #f3f4f6;
+}
+
+body.dark-mode .menu-link:hover {
+  color: #f3f4f6;
+  background-color: #374151;
+}
+
+.menu-link.active {
+  color: #3b82f6;
+  background-color: #f0f9ff;
+  border-left: 3px solid #3b82f6;
+  padding-left: calc(1.5rem - 3px);
+}
+
+body.dark-mode .menu-link.active {
+  background-color: #1e3a8a;
+}
+
+.sidebar-footer {
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+body.dark-mode .sidebar-footer {
+  border-top-color: #374151;
+}
+
+.logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .logout-btn {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+.logout-btn:hover {
+  background-color: #fecaca;
+}
+
+body.dark-mode .logout-btn:hover {
+  background-color: #991b1b;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    height: 100vh;
+    z-index: 999;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+}

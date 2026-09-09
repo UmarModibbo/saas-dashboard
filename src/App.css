@@ -1,0 +1,23 @@
+.app {
+  display: flex;
+  height: 100vh;
+  background-color: #f9fafb;
+  transition: background-color 0.3s ease;
+}
+
+.app.dark-mode {
+  background-color: #111827;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+}
